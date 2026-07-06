@@ -1,960 +1,807 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>
-            PT. INDO PUTRA TEHNIK | Marine Contractor & General Supplier
-        </title>
 
-        <!-- FAVICON (Icon pada Tab Browser) -->
-        <link rel="icon" type="image/png" href="logo.png" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PT. INDO PUTRA TEHNIK | Marine Contractor & General Supplier</title>
 
-        <!-- Tailwind CSS CDN -->
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            brand: {
-                                red: "#df1b23",
-                                redHover: "#b9131a",
-                                silver: "#8ea0a6",
-                                light: "#fef2f2",
-                                dark: "#0f172a",
-                            },
+    <!-- FAVICON (Icon pada Tab Browser) -->
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: "#df1b23",
+                            redHover: "#b9131a",
+                            silver: "#8ea0a6",
+                            light: "#fef2f2",
+                            dark: "#0f172a",
                         },
                     },
                 },
-            };
-        </script>
-        <style>
-            /* Menghilangkan panah bawaan HTML details di beberapa browser */
-            details > summary {
-                list-style: none;
-            }
-            details > summary::-webkit-details-marker {
-                display: none;
-            }
-        </style>
-    </head>
-    <body class="bg-slate-50 text-slate-800 font-sans">
-        <!-- NAVBAR -->
-        <nav class="bg-white shadow-md fixed w-full z-50 top-0 left-0">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between h-20">
-                    <div class="flex items-center">
-                        <div class="flex-shrink-0 flex items-center gap-3">
-                            <!-- LOGO UTAMA -->
-                            <img
-                                src="logo.png"
-                                alt="PT Indo Putra Tehnik Logo"
-                                class="h-12 w-auto object-contain"
-                            />
-                            <span
-                                class="text-xl font-bold text-slate-900 tracking-wider hidden sm:block"
-                                >PT. INDO PUTRA TEHNIK</span
-                            >
-                        </div>
-                    </div>
+            },
+        };
+    </script>
+    <style>
+        /* Menghilangkan panah bawaan HTML details di beberapa browser */
+        details>summary {
+            list-style: none;
+        }
 
-                    <!-- Desktop Menu -->
-                    <div class="hidden lg:flex items-center space-x-6">
-                        <a
-                            href="#home"
-                            class="text-slate-600 hover:text-brand-red font-medium transition-colors"
-                            >Home</a
-                        >
-                        <a
-                            href="#about"
-                            class="text-slate-600 hover:text-brand-red font-medium transition-colors"
-                            >About & Vision</a
-                        >
-                        <a
-                            href="#customers"
-                            class="text-slate-600 hover:text-brand-red font-medium transition-colors"
-                            >Customers</a
-                        >
-                        <a
-                            href="#services"
-                            class="text-slate-600 hover:text-brand-red font-medium transition-colors"
-                            >Services</a
-                        >
-                        <a
-                            href="#contact"
-                            class="bg-brand-red text-white px-5 py-2.5 rounded-md font-medium hover:bg-brand-redHover transition-colors shadow-sm"
-                            >Contact Us</a
-                        >
-                    </div>
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
 
-                    <!-- Mobile menu button -->
-                    <div class="flex items-center lg:hidden">
-                        <button
-                            id="mobile-menu-btn"
-                            type="button"
-                            class="text-slate-600 hover:text-brand-red focus:outline-none"
-                        >
-                            <svg
-                                class="h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M4 6h16M4 12h16M4 18h16"
-                                />
-                            </svg>
-                        </button>
+<body class="bg-slate-50 text-slate-800 font-sans">
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0 left-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-3">
+                        <!-- LOGO UTAMA -->
+                        <img src="logo.png" alt="PT Indo Putra Tehnik Logo" class="h-12 w-auto object-contain" />
+                        <span class="text-xl font-bold text-slate-900 tracking-wider hidden sm:block">PT. INDO PUTRA
+                            TEHNIK</span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Mobile Menu (Hidden by default) -->
-            <div
-                id="mobile-menu"
-                class="hidden lg:hidden bg-white border-t border-slate-200 px-4 pt-2 pb-4 space-y-1 shadow-lg"
-            >
-                <a
-                    href="#home"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-light hover:text-brand-red"
-                    >Home</a
-                >
-                <a
-                    href="#about"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-light hover:text-brand-red"
-                    >About & Vision</a
-                >
-                <a
-                    href="#customers"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-light hover:text-brand-red"
-                    >Customers</a
-                >
-                <a
-                    href="#services"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-light hover:text-brand-red"
-                    >Services</a
-                >
-                <a
-                    href="#contact"
-                    class="block w-full text-center bg-brand-red text-white px-3 py-2 rounded-md text-base font-medium mt-2"
-                    >Contact Us</a
-                >
-            </div>
-        </nav>
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="#home" class="text-slate-600 hover:text-brand-red font-medium transition-colors">Home</a>
+                    <a href="#about" class="text-slate-600 hover:text-brand-red font-medium transition-colors">About &
+                        Vision</a>
+                    <a href="#customers"
+                        class="text-slate-600 hover:text-brand-red font-medium transition-colors">Customers</a>
+                    <a href="#services"
+                        class="text-slate-600 hover:text-brand-red font-medium transition-colors">Services</a>
+                    <a href="#contact"
+                        class="bg-brand-red text-white px-5 py-2.5 rounded-md font-medium hover:bg-brand-redHover transition-colors shadow-sm">Contact
+                        Us</a>
+                </div>
 
-        <!-- HERO SECTION -->
-        <section
-            id="home"
-            class="pt-32 pb-20 md:pt-48 md:pb-32 bg-gradient-to-br from-brand-dark via-slate-800 to-slate-900 text-white relative overflow-hidden"
-        >
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="max-w-3xl">
-                    <span
-                        class="text-brand-red font-bold uppercase tracking-wider text-sm block mb-3"
-                        >Professional Services</span
-                    >
-                    <h1
-                        class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight"
-                    >
-                        Marine Contractor & General Supplier
-                    </h1>
-                    <p class="text-lg text-slate-300 mb-8 max-w-2xl">
-                        Providing comprehensive marine engineering, repair, and
-                        maintenance services, along with top-tier logistical and
-                        supply solutions.
+                <!-- Mobile menu button -->
+                <div class="flex items-center lg:hidden">
+                    <button id="mobile-menu-btn" type="button"
+                        class="text-slate-600 hover:text-brand-red focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white border-t border-slate-200 px-4 pt-2 pb-4 space-y-1 shadow-lg">
+            <a href="#home"
+                class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-light hover:text-brand-red">Home</a>
+            <a href="#about"
+                class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-light hover:text-brand-red">About
+                & Vision</a>
+            <a href="#customers"
+                class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-light hover:text-brand-red">Customers</a>
+            <a href="#services"
+                class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-light hover:text-brand-red">Services</a>
+            <a href="#contact"
+                class="block w-full text-center bg-brand-red text-white px-3 py-2 rounded-md text-base font-medium mt-2">Contact
+                Us</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <!-- Menambahkan class relative agar pseudo-element logo tidak keluar batas -->
+    <!-- Menggunakan bg-slate-50 (putih keabu-abuan) -->
+    <section id="home" class="pt-32 pb-20 md:pt-48 md:pb-32 bg-slate-50 text-slate-900 relative overflow-hidden">
+
+        <!-- WATERMARK (Sangat samar) -->
+        <div class="absolute inset-0 z-0 flex items-center justify-center opacity-[0.05] pointer-events-none">
+            <img src="logo-full.png" alt="Watermark" class="w-full max-w-2xl object-contain">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+            <div class="max-w-3xl">
+                <span class="text-[#e31e24] font-bold uppercase tracking-wider text-sm block mb-3">Professional
+                    Services</span>
+                <!-- Menggunakan text-slate-900 agar kontras dengan background terang -->
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight text-slate-900">
+                    Marine Contractor & General Supplier
+                </h1>
+                <p class="text-lg text-slate-600 mb-8">
+                    Providing comprehensive marine engineering, repair, and maintenance
+                    services, along with top-tier logistical and supply solutions.
+                </p>
+                <a href="#services"
+                    class="inline-flex bg-[#e31e24] text-white px-8 py-3 rounded-md font-bold hover:bg-red-800 transition-colors shadow-lg">
+                    Our Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT, VISION & MISSION -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 uppercase mb-6">
+                        Our Vision
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        To become a leading integrated General Contractor for Marine and
+                        Offshore Industry in regional and reputable company in Asia.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a
-                            href="#services"
-                            class="inline-flex justify-center items-center bg-brand-red text-white px-6 py-3 rounded-md font-bold hover:bg-brand-redHover transition-colors shadow-md"
-                        >
-                            Our Services
-                        </a>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        Be a competitive company, working together and building
+                        communication to help customers provide the best technical service
+                        solutions, repair and maintenance services and supply units in the
+                        fields of Mechanical and Electrical engineering, Marine Product
+                        Support, ENC Product Supported (AVCS CMAP) and marine safety
+                        equipment
+                    </p>
+                    <div class="border-l-4 border-brand-red pl-4 mt-6">
+                        <p class="text-slate-800 leading-relaxed font-semibold">
+                            Maintain long term business relationships on the basis of mutual
+                            benefit and partnership
+                        </p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- ABOUT, VISION & MISSION -->
-        <section id="about" class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <div>
-                        <h2
-                            class="text-3xl font-bold text-slate-900 uppercase mb-6"
-                        >
-                            Our Vision
-                        </h2>
-                        <p class="text-slate-600 leading-relaxed mb-4">
-                            To become a leading integrated General Contractor
-                            for Marine and Offshore Industry in regional and
-                            reputable company in Asia.
-                        </p>
-                        <p class="text-slate-600 leading-relaxed mb-4">
-                            Be a competitive company, working together and
-                            building communication to help customers provide the
-                            best technical service solutions, repair and
-                            maintenance services and supply units in the fields
-                            of Mechanical and Electrical engineering, Marine
-                            Product Support, ENC Product Supported (AVCS CMAP)
-                            and marine safety equipment
-                        </p>
-                        <div class="border-l-4 border-brand-red pl-4 mt-6">
-                            <p
-                                class="text-slate-800 leading-relaxed font-semibold"
-                            >
-                                Maintain long term business relationships on the
-                                basis of mutual benefit and partnership
+                <div class="bg-brand-light p-8 rounded-xl border border-red-100">
+                    <h2 class="text-3xl font-bold text-slate-900 uppercase mb-6">
+                        Our Mission
+                    </h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-brand-red text-lg">
+                                Providing High-Quality Services:
+                            </h4>
+                            <p class="text-slate-700 mt-1">
+                                Prioritizing quality and customer satisfaction through
+                                professional and timely service.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brand-red text-lg">
+                                Collaborating with Strategic Partners:
+                            </h4>
+                            <p class="text-slate-700 mt-1">
+                                Building long-term relationships with partners and suppliers
+                                to enhance customer value.
                             </p>
                         </div>
                     </div>
-
-                    <div
-                        class="bg-brand-light p-8 rounded-xl border border-red-100"
-                    >
-                        <h2
-                            class="text-3xl font-bold text-slate-900 uppercase mb-6"
-                        >
-                            Our Mission
-                        </h2>
-                        <div class="space-y-6">
-                            <div>
-                                <h4 class="font-bold text-brand-red text-lg">
-                                    Providing High-Quality Services:
-                                </h4>
-                                <p class="text-slate-700 mt-1">
-                                    Prioritizing quality and customer
-                                    satisfaction through professional and timely
-                                    service.
-                                </p>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-brand-red text-lg">
-                                    Collaborating with Strategic Partners:
-                                </h4>
-                                <p class="text-slate-700 mt-1">
-                                    Building long-term relationships with
-                                    partners and suppliers to enhance customer
-                                    value.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- OUR CUSTOMERS (Dinamis dari Folder) -->
-        <section id="customers" class="py-20 bg-slate-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl font-bold text-slate-900 uppercase mb-8">
-                    Our Customers
+    <!-- OUR CUSTOMERS (Dinamis dari Folder) -->
+    <section id="customers" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-slate-900 uppercase mb-8">
+                Our Customers
+            </h2>
+            <p class="text-slate-600 mb-10 max-w-2xl mx-auto">
+                We are trusted by leading companies across the maritime and offshore
+                industries.
+            </p>
+
+            <!-- Kontainer tempat logo akan dirender secara dinamis oleh JavaScript -->
+            <div id="customer-logo-grid"
+                class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center justify-center">
+                <!-- Logo akan disuntikkan ke sini oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR SERVICE OVERVIEW -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 uppercase mb-4">
+                    Our Service
                 </h2>
-                <p class="text-slate-600 mb-10 max-w-2xl mx-auto">
-                    We are trusted by leading companies across the maritime and
-                    offshore industries.
+                <div class="w-24 h-1 bg-brand-red mx-auto"></div>
+                <p class="text-slate-600 mt-6 max-w-2xl mx-auto">
+                    We offer comprehensive technical, mechanical, and logistical
+                    solutions designed for optimal marine and offshore operations.
                 </p>
+            </div>
 
-                <!-- Kontainer tempat logo akan dirender secara dinamis oleh JavaScript -->
+            <!-- 3 Main Service Categories -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Mechanical Service -->
                 <div
-                    id="customer-logo-grid"
-                    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center justify-center"
-                >
-                    <!-- Logo akan disuntikkan ke sini oleh JavaScript -->
+                    class="bg-slate-50 p-6 rounded-xl border border-slate-200 hover:border-brand-red transition-colors">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2">
+                        Mechanical Service
+                    </h3>
+                    <ul class="text-sm text-slate-700 space-y-2 list-disc pl-5">
+                        <li>General Overhaul Engine</li>
+                        <li>Hydraulic System</li>
+                        <li>Service & Repair Valve</li>
+                        <li>HVAC / Refrigration system</li>
+                        <li>Tank Gauging System</li>
+                        <li>Turbo Service repair & balancing</li>
+                        <li>Mechanical job & Fabrication</li>
+                        <li>Pump Instrument (Cargo/Framo Pump)</li>
+                        <li>Boiler (Re-tubing, Trouble shooting)</li>
+                    </ul>
+                </div>
+
+                <!-- Electrical & Automation -->
+                <div
+                    class="bg-slate-50 p-6 rounded-xl border border-slate-200 hover:border-brand-red transition-colors">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2">
+                        Electrical & Automation
+                    </h3>
+                    <ul class="text-sm text-slate-700 space-y-2 list-disc pl-5">
+                        <li>Alternator (Cleaning, Trouble shoot)</li>
+                        <li>Engine Safety Device</li>
+                        <li>Fire Alarm System and Component</li>
+                        <li>ODME / OWS System Bilge Alarm</li>
+                        <li>Automation Equipment System</li>
+                        <li>
+                            Pneumatic System (Manovering, Tank Gauging, Cargo Tank Control)
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- General Marine Supplier -->
+                <div
+                    class="bg-slate-50 p-6 rounded-xl border border-slate-200 hover:border-brand-red transition-colors">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2">
+                        General Marine Supplier
+                    </h3>
+                    <ul class="text-sm text-slate-700 space-y-2 list-disc pl-5">
+                        <li>Machineries and Parts</li>
+                        <li>Spare Parts Engine</li>
+                        <li>Safety Equipment</li>
+                        <li>Running Store Engine</li>
+                        <li>Deck Store</li>
+                    </ul>
                 </div>
             </div>
-        </section>
 
-        <!-- OUR SERVICE OVERVIEW -->
-        <section id="services" class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2
-                        class="text-3xl font-bold text-slate-900 uppercase mb-4"
-                    >
-                        Our Service
-                    </h2>
-                    <div class="w-24 h-1 bg-brand-red mx-auto"></div>
-                    <p class="text-slate-600 mt-6 max-w-2xl mx-auto">
-                        We offer comprehensive technical, mechanical, and
-                        logistical solutions designed for optimal marine and
-                        offshore operations.
-                    </p>
-                </div>
+            <!-- DETAILED SERVICE ACCORDIONS (Buka-Tutup) -->
+            <!-- SERVICES SECTION -->
+            <section id="services" class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-3xl font-bold text-center mb-10 uppercase text-slate-900">Our Services</h2>
 
-                <!-- 3 Main Service Categories -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                    <!-- Mechanical Service -->
-                    <div
-                        class="bg-slate-50 p-6 rounded-xl border border-slate-200 hover:border-brand-red transition-colors"
-                    >
-                        <h3
-                            class="text-xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2"
-                        >
-                            Mechanical Service
-                        </h3>
-                        <ul
-                            class="text-sm text-slate-700 space-y-2 list-disc pl-5"
-                        >
-                            <li>General Overhaul Engine</li>
-                            <li>Hydraulic System</li>
-                            <li>Service & Repair Valve</li>
-                            <li>HVAC / Refrigration system</li>
-                            <li>Tank Gauging System</li>
-                            <li>Turbo Service repair & balancing</li>
-                            <li>Mechanical job & Fabrication</li>
-                            <li>Pump Instrument (Cargo/Framo Pump)</li>
-                            <li>Boiler (Re-tubing, Trouble shooting)</li>
-                        </ul>
-                    </div>
+                    <div class="space-y-6">
 
-                    <!-- Electrical & Automation -->
-                    <div
-                        class="bg-slate-50 p-6 rounded-xl border border-slate-200 hover:border-brand-red transition-colors"
-                    >
-                        <h3
-                            class="text-xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2"
-                        >
-                            Electrical & Automation
-                        </h3>
-                        <ul
-                            class="text-sm text-slate-700 space-y-2 list-disc pl-5"
-                        >
-                            <li>Alternator (Cleaning, Trouble shoot)</li>
-                            <li>Engine Safety Device</li>
-                            <li>Fire Alarm System and Component</li>
-                            <li>ODME / OWS System Bilge Alarm</li>
-                            <li>Automation Equipment System</li>
-                            <li>
-                                Pneumatic System (Manovering, Tank Gauging,
-                                Cargo Tank Control)
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- General Marine Supplier -->
-                    <div
-                        class="bg-slate-50 p-6 rounded-xl border border-slate-200 hover:border-brand-red transition-colors"
-                    >
-                        <h3
-                            class="text-xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2"
-                        >
-                            General Marine Supplier
-                        </h3>
-                        <ul
-                            class="text-sm text-slate-700 space-y-2 list-disc pl-5"
-                        >
-                            <li>Machineries and Parts</li>
-                            <li>Spare Parts Engine</li>
-                            <li>Safety Equipment</li>
-                            <li>Running Store Engine</li>
-                            <li>Deck Store</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- DETAILED SERVICE ACCORDIONS (Buka-Tutup) -->
-                <div class="max-w-4xl mx-auto">
-                    <h3
-                        class="text-2xl font-bold text-slate-900 mb-6 text-center uppercase"
-                    >
-                        Mechanical Service Detail Capabilities
-                    </h3>
-
-                    <div class="space-y-4">
-                        <!-- ACCORDION 1: Overhaul Engine -->
-                        <details
-                            class="group bg-slate-50 border border-slate-200 rounded-lg shadow-sm"
-                        >
+                        <!-- 1. General Overhaul Engine & Gear Box -->
+                        <details class="group bg-slate-50 border border-slate-200 rounded-xl shadow-sm">
                             <summary
-                                class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-slate-900 group-open:text-brand-red group-open:bg-brand-light transition-colors rounded-lg"
-                            >
-                                <span>GENERAL OVERHAUL ENGINE</span>
-                                <span class="transition group-open:rotate-180">
-                                    <svg
-                                        fill="none"
-                                        height="24"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        viewBox="0 0 24 24"
-                                        width="24"
-                                    >
-                                        <path d="M6 9l6 6 6-6"></path>
-                                    </svg>
-                                </span>
+                                class="font-bold flex justify-between items-center cursor-pointer p-6 text-slate-900 group-open:text-brand-red group-open:bg-brand-light transition-colors rounded-xl text-lg">
+                                GENERAL OVERHAUL ENGINE & GEAR BOX
+                                <span class="transition group-open:rotate-180 text-xl">▼</span>
                             </summary>
                             <div
-                                class="p-6 text-sm text-slate-700 bg-white border-t border-slate-100 rounded-b-lg"
-                            >
-                                <div
-                                    class="grid grid-cols-1 md:grid-cols-2 gap-8"
-                                >
+                                class="p-6 border-t border-slate-200 bg-white rounded-b-xl flex flex-col lg:flex-row gap-8">
+                                <!-- Bagian Teks -->
+                                <div class="flex-1 space-y-4">
                                     <div>
-                                        <ul
-                                            class="list-disc pl-5 text-sm text-slate-700 space-y-1 mb-4 font-semibold"
-                                        >
-                                            <li>
-                                                Experience for Engine 2 stroke &
-                                                4 stroke
+                                        <h4 class="font-bold text-slate-800 mb-2 border-l-4 border-brand-red pl-2">
+                                            Engine Overhaul Procedures</h4>
+                                        <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                            <li>Complete engine disassembly, inspection, and component cleaning.</li>
+                                            <li>Cylinder head, liner, piston, and connecting rod servicing.</li>
+                                            <li>Crankshaft and bearing inspection/replacement.</li>
+                                            <li>Fuel injection system overhaul, Turbocharger service and calibration.
                                             </li>
-                                            <li>
-                                                Renew Crank Shaft & Badplate
-                                            </li>
-                                            <li>Repair Turbo Charge Engine</li>
-                                            <li>
-                                                Fuel Pump Overhaul & Calibration
-                                            </li>
-                                            <li>Engine Alignment</li>
+                                            <li>Precision engine alignment (laser or optical), Vibration analysis, and
+                                                NDT.</li>
+                                            <li>Commissioning, performance testing, tuning post-overhaul, and Overhaul
+                                                Report.</li>
                                         </ul>
-                                        <ul
-                                            class="list-decimal pl-5 text-sm text-slate-600 space-y-1"
-                                        >
-                                            <li>
-                                                Complete engine disassembly and
-                                                inspection
-                                            </li>
-                                            <li>
-                                                Cylinder head, liner, piston,
-                                                and connecting rod servicing
-                                            </li>
-                                            <li>
-                                                Crankshaft and bearing
-                                                inspection/replacement
-                                            </li>
-                                            <li>
-                                                Precision engine alignment
-                                                (laser or optical)
-                                            </li>
-                                            <li>Vibration analysis</li>
-                                            <li>
-                                                Component cleaning and NDT
-                                                (Non-Destructive Testing)
-                                            </li>
-                                            <li>
-                                                Comisioning / Performance
-                                                testing post-overhaul
-                                            </li>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 mb-2 border-l-4 border-brand-red pl-2">Gear
+                                            Box Repair & Maintenance</h4>
+                                        <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                            <li>Diagnostic inspection, fault finding, and preventative maintenance
+                                                programs.</li>
+                                            <li>Gear and bearing replacement, shaft sealing, and alignment.</li>
+                                            <li>Clutch assembly repair, lubrication system service, casing and housing
+                                                repairs.</li>
                                         </ul>
                                     </div>
                                     <div
-                                        class="bg-brand-light p-5 rounded border border-red-100"
-                                    >
-                                        <h4
-                                            class="font-bold text-brand-red mb-2"
-                                        >
-                                            Our advantages
-                                        </h4>
-                                        <p class="mb-2">
-                                            Certified mechanics experienced in
-                                            marine engine brands (Yanmar, MAN
-                                            Diesel, Daihatsu, MAK, Cummins,
-                                            Caterpillar, Mitsubishi).
-                                        </p>
-                                        <p class="mb-2">
-                                            <strong>Fast & Efficient:</strong>
-                                            We understand that vessel downtime
-                                            is costly, so we focus on speed.
-                                        </p>
-                                        <p class="mb-2">
-                                            <strong>Standards-Based:</strong>
-                                            Work complies with applicable safety
-                                            and technical standards.
-                                        </p>
-                                        <p>
-                                            <strong>Work Guarantee:</strong>
-                                            Provides a quality assurance of
-                                            repair results.
-                                        </p>
+                                        class="bg-brand-light p-4 rounded-lg mt-4 text-sm text-slate-800 border border-red-100">
+                                        <span class="font-bold text-brand-red block mb-1">Our Advantages:</span>
+                                        Certified mechanics experienced in marine engine brands (Yanmar, MAN Diesel,
+                                        Daihatsu, MAK, Cummins, Caterpillar, Mitsubishi). Fast & efficient to minimize
+                                        vessel downtime. Work complies with safety standards and includes a Quality
+                                        Assurance Guarantee.
                                     </div>
+                                </div>
+
+                                <!-- SLIDER GAMBAR KECIL -->
+                                <div class="w-full lg:w-80 shrink-0">
+                                    <div
+                                        class="relative h-60 w-full overflow-hidden rounded-lg shadow-inner border border-slate-200 bg-slate-100 flex items-center justify-center p-2">
+                                        <div
+                                            class="flex transition-transform duration-700 ease-in-out h-full w-full service-slider-track items-center">
+                                            <!-- object-contain mencegah gambar pecah -->
+                                            <img src="image/hauld1.png"
+                                                class="min-w-full max-h-full object-contain drop-shadow-md"
+                                                alt="Overhaul 1">
+                                            <img src="image/hauld2.png"
+                                                class="min-w-full max-h-full object-contain drop-shadow-md"
+                                                alt="Overhaul 2">
+                                            <img src="image/hauld3.jpg"
+                                                class="min-w-full max-h-full object-contain drop-shadow-md"
+                                                alt="Overhaul 3">
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-center text-slate-400 mt-2 font-medium">Service Documentation
+                                    </p>
                                 </div>
                             </div>
                         </details>
 
-                        <!-- ACCORDION 2: Gear Box -->
-                        <details
-                            class="group bg-slate-50 border border-slate-200 rounded-lg shadow-sm"
-                        >
+                        <!-- 2. Hydraulic, Pneumatic & Valve -->
+                        <details class="group bg-slate-50 border border-slate-200 rounded-xl shadow-sm">
                             <summary
-                                class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-slate-900 group-open:text-brand-red group-open:bg-brand-light transition-colors rounded-lg"
-                            >
-                                <span>GEAR BOX REPAIR AND MAINTENANCE</span>
-                                <span class="transition group-open:rotate-180">
-                                    <svg
-                                        fill="none"
-                                        height="24"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        viewBox="0 0 24 24"
-                                        width="24"
-                                    >
-                                        <path d="M6 9l6 6 6-6"></path>
-                                    </svg>
-                                </span>
+                                class="font-bold flex justify-between items-center cursor-pointer p-6 text-slate-900 group-open:text-brand-red group-open:bg-brand-light transition-colors rounded-xl text-lg">
+                                HYDRAULIC, PNEUMATIC & VALVE SYSTEM
+                                <span class="transition group-open:rotate-180 text-xl">▼</span>
                             </summary>
                             <div
-                                class="p-6 text-sm text-slate-700 bg-white border-t border-slate-100 rounded-b-lg"
-                            >
-                                <p class="mb-4">
-                                    Ensure seamless power transfer and reliable
-                                    vessel performance with our expert
-                                    Transmission and Gearbox services. We
-                                    diagnose issues, restore optimal
-                                    functionality, and minimize downtime,
-                                    ensuring efficient operation of your
-                                    vessel's propulsion system.
+                                class="p-6 border-t border-slate-200 bg-white rounded-b-xl flex flex-col lg:flex-row gap-8">
+                                <div class="flex-1 space-y-4">
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 mb-2 border-l-4 border-brand-red pl-2">
+                                            Hydraulic System Maintenance</h4>
+                                        <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                            <li>Repair for Cargo/Hoist/Provision Crane, Winchlass, & Mooring winch.</li>
+                                            <li>Power Pack Steering Gear, Bow Thruster, CPP, and Framo Pump repair.</li>
+                                            <li>Pump/motor repair, Valve servicing, Leak detection, and pressure
+                                                testing.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 mb-2 border-l-4 border-brand-red pl-2">
+                                            Pneumatic & Valve Systems</h4>
+                                        <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                            <li>Installing actuators, cylinders, valves, compressors, and air treatment
+                                                systems.</li>
+                                            <li>Assembling air logic systems, piping, headers, and configuring sensors.
+                                            </li>
+                                            <li>PV Valve & Safety Valve calibration (Class Certificate), Tank Gauging
+                                                System.</li>
+                                            <li>Troubleshooting air leaks, replacing faulty components, and HVAC
+                                                maintenance.</li>
+                                        </ul>
+                                    </div>
+                                    <div
+                                        class="bg-brand-light p-4 rounded-lg mt-4 text-sm text-slate-800 border border-red-100">
+                                        <span class="font-bold text-brand-red block mb-1">Our Advantages:</span>
+                                        High precision calibration tools for safety valves. Rapid response
+                                        troubleshooting for pressure leaks and system failures. We provide
+                                        class-certified testing to restore high-pressure system integrity safely and
+                                        efficiently.
+                                    </div>
+                                </div>
+
+                                <!-- SLIDER GAMBAR KECIL -->
+                                <div class="w-full lg:w-80 shrink-0">
+                                    <div
+                                        class="relative h-60 w-full overflow-hidden rounded-lg shadow-inner border border-slate-200 bg-slate-100 flex items-center justify-center p-2">
+                                        <div
+                                            class="flex transition-transform duration-700 ease-in-out h-full w-full service-slider-track items-center">
+                                            <img src="image/hydraulic1.png"
+                                                class="min-w-full max-h-full object-contain drop-shadow-md"
+                                                alt="Hydraulic 1">
+                                            <img src="image/hydraulic2.png"
+                                                class="min-w-full max-h-full object-contain drop-shadow-md"
+                                                alt="Hydraulic 2">
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-center text-slate-400 mt-2 font-medium">Service Documentation
+                                    </p>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- 3. Electrical, Automation & PLC -->
+                        <details class="group bg-slate-50 border border-slate-200 rounded-xl shadow-sm">
+                            <summary
+                                class="font-bold flex justify-between items-center cursor-pointer p-6 text-slate-900 group-open:text-brand-red group-open:bg-brand-light transition-colors rounded-xl text-lg">
+                                ELECTRICAL SYSTEM, PLC & AUTOMATION
+                                <span class="transition group-open:rotate-180 text-xl">▼</span>
+                            </summary>
+                            <div
+                                class="p-6 border-t border-slate-200 bg-white rounded-b-xl flex flex-col lg:flex-row gap-8">
+                                <div class="flex-1 space-y-4">
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 mb-2 border-l-4 border-brand-red pl-2">
+                                            Generator & Alternator Services</h4>
+                                        <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                            <li>Diagnostic testing, troubleshooting, and Load testing.</li>
+                                            <li>Stator and rotor rewinding, Insulation resistance testing.</li>
+                                            <li>Bearing replacement, Brush and commutator maintenance, Voltage regulator
+                                                repair.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 mb-2 border-l-4 border-brand-red pl-2">
+                                            Electrical System, PLC & Calibration</h4>
+                                        <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                            <li>Develop PLC, DCS, and HMI systems (System Design & Programming).</li>
+                                            <li>Installation, testing, and repair of electrical panels, wiring, sensors,
+                                                and actuators.</li>
+                                            <li>Root cause analysis and troubleshooting for machinery control systems.
+                                            </li>
+                                            <li>Calibration for: Oil Water Separator, ODME, Safety Device Engine,
+                                                Maneuvering System, Fire Alarm, and Fixed Gas Detectors.</li>
+                                        </ul>
+                                    </div>
+                                    <div
+                                        class="bg-brand-light p-4 rounded-lg mt-4 text-sm text-slate-800 border border-red-100">
+                                        <span class="font-bold text-brand-red block mb-1">Our Advantages:</span>
+                                        Expert marine electrical engineers equipped with accurate diagnostic tools. 100%
+                                        compliance with industry standards (NSBI) and marine safety codes to prevent
+                                        critical power failures and optimize Overall Equipment Effectiveness (OEE).
+                                    </div>
+                                </div>
+
+                                <!-- SLIDER GAMBAR KECIL -->
+                                <div class="w-full lg:w-80 shrink-0">
+                                    <div
+                                        class="relative h-60 w-full overflow-hidden rounded-lg shadow-inner border border-slate-200 bg-slate-100 flex items-center justify-center p-2">
+                                        <div
+                                            class="flex transition-transform duration-700 ease-in-out h-full w-full service-slider-track items-center">
+                                            <img src="image/electrical1.png"
+                                                class="min-w-full max-h-full object-contain drop-shadow-md"
+                                                alt="Electrical 1">
+                                            <img src="image/electrical2.png"
+                                                class="min-w-full max-h-full object-contain drop-shadow-md"
+                                                alt="Electrical 2">
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-center text-slate-400 mt-2 font-medium">Service Documentation
+                                    </p>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- 4. Propeller, Shaft & Pump -->
+                        <details class="group bg-slate-50 border border-slate-200 rounded-xl shadow-sm">
+                            <summary
+                                class="font-bold flex justify-between items-center cursor-pointer p-6 text-slate-900 group-open:text-brand-red group-open:bg-brand-light transition-colors rounded-xl text-lg">
+                                PROPELLER, SHAFT & PUMP SERVICES
+                                <span class="transition group-open:rotate-180 text-xl">▼</span>
+                            </summary>
+                            <div
+                                class="p-6 border-t border-slate-200 bg-white rounded-b-xl flex flex-col lg:flex-row gap-8">
+                                <div class="flex-1 space-y-4">
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 mb-2 border-l-4 border-brand-red pl-2">
+                                            Propeller and Shaft Repair</h4>
+                                        <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                            <li>Visual inspection, damage assessment, and blade straightening/repair.
+                                            </li>
+                                            <li>Propeller balancing (static and dynamic).</li>
+                                            <li>Surface polishing, anti-fouling preparation, and performance
+                                                optimization.</li>
+                                            <li>Shaft and coupling inspection, precise installation, and alignment.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 mb-2 border-l-4 border-brand-red pl-2">Pump
+                                            and Motor Services</h4>
+                                        <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                            <li>Disassembly, detailed inspection, and performance testing after
+                                                overhaul.</li>
+                                            <li>Impeller, casing, bearing, and mechanical seal replacement.</li>
+                                            <li>Shaft alignment, balancing, and motor winding inspection/repair.</li>
+                                        </ul>
+                                    </div>
+                                    <div
+                                        class="bg-brand-light p-4 rounded-lg mt-4 text-sm text-slate-800 border border-red-100">
+                                        <span class="font-bold text-brand-red block mb-1">Our Advantages:</span>
+                                        Advanced static/dynamic balancing and precise laser alignment techniques. Our
+                                        meticulous service significantly reduces vibration, improves fuel economy, and
+                                        restores crucial thrust reliability using OEM-standard mechanical seals.
+                                    </div>
+                                </div>
+
+                                <!-- SLIDER GAMBAR KECIL -->
+                                <div class="w-full lg:w-80 shrink-0">
+                                    <div
+                                        class="relative h-60 w-full overflow-hidden rounded-lg shadow-inner border border-slate-200 bg-slate-100 flex items-center justify-center p-2">
+                                        <div
+                                            class="flex transition-transform duration-700 ease-in-out h-full w-full service-slider-track items-center">
+                                            <img src="image/propeler1.png"
+                                                class="min-w-full max-h-full object-contain drop-shadow-md"
+                                                alt="Propeller 1">
+                                            <img src="image/propeler2.png"
+                                                class="min-w-full max-h-full object-contain drop-shadow-md"
+                                                alt="Propeller 2">
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-center text-slate-400 mt-2 font-medium">Service Documentation
+                                    </p>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- 5. Trading Supplies -->
+                        <details class="group bg-slate-50 border border-slate-200 rounded-xl shadow-sm">
+                            <summary
+                                class="font-bold flex justify-between items-center cursor-pointer p-6 text-slate-900 group-open:text-brand-red group-open:bg-brand-light transition-colors rounded-xl text-lg">
+                                TRADING & MARINE SUPPLIER
+                                <span class="transition group-open:rotate-180 text-xl">▼</span>
+                            </summary>
+                            <div
+                                class="p-6 border-t border-slate-200 bg-white rounded-b-xl flex flex-col lg:flex-row gap-8">
+                                <div class="flex-1 space-y-4">
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 mb-2 border-l-4 border-brand-red pl-2">
+                                            Machineries and Spare Parts</h4>
+                                        <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                            <li><strong>Hydraulic Spares:</strong> Hydraulic motors, pumps, seal kits,
+                                                industrial hoses, and fittings.</li>
+                                            <li><strong>Electrical Parts:</strong> Marine cables, solenoid DCV,
+                                                contactors, and Electric Motor spares.</li>
+                                            <li><strong>Engine Spares:</strong> Marine Engine, Genset, Compressor, and
+                                                Pump Spare Parts.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 mb-2 border-l-4 border-brand-red pl-2">Deck,
+                                            Safety & Hardware</h4>
+                                        <ul class="list-disc pl-5 text-sm text-slate-700 space-y-1">
+                                            <li><strong>Navigation & Safety:</strong> Navigation tools, Safety
+                                                Equipment, Engine and Deck Store.</li>
+                                            <li><strong>Rigging Items:</strong> Chain, Wire Ropes, Polypropylene rope,
+                                                Shackles, and fitting accessories.</li>
+                                            <li><strong>General Hardware:</strong> Various marine hardware supplies for
+                                                general operational needs.</li>
+                                        </ul>
+                                    </div>
+                                    <div
+                                        class="bg-brand-light p-4 rounded-lg mt-4 text-sm text-slate-800 border border-red-100">
+                                        <span class="font-bold text-brand-red block mb-1">Our Advantages:</span>
+                                        Extensive supplier network providing genuine, high-quality OEM parts. We offer
+                                        rapid logistical delivery directly to vessels, comprehensive stock readiness for
+                                        running stores, and highly competitive pricing for bulk requirements.
+                                    </div>
+                                </div>
+
+                                <!-- SLIDER GAMBAR KECIL -->
+                                <div class="w-full lg:w-80 shrink-0">
+                                    <div
+                                        class="relative h-60 w-full overflow-hidden rounded-lg shadow-inner border border-slate-200 bg-slate-100 flex items-center justify-center p-2">
+                                        <div
+                                            class="flex transition-transform duration-700 ease-in-out h-full w-full service-slider-track items-center">
+                                            <img src="image/trading1.png"
+                                                class="min-w-full max-h-full object-contain drop-shadow-md"
+                                                alt="Supply 1">
+                                            <img src="image/trading2.png"
+                                                class="min-w-full max-h-full object-contain drop-shadow-md"
+                                                alt="Supply 2">
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-center text-slate-400 mt-2 font-medium">Service Documentation
+                                    </p>
+                                </div>
+                            </div>
+                        </details>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- CONTACT US -->
+    <section id="contact" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-10 text-white uppercase border-b border-slate-700 pb-4">
+                Company Profile & Contact
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Address Section -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-brand-red mb-2">
+                            Company Name
+                        </h3>
+                        <p class="text-lg font-medium text-slate-200">
+                            PT. INDO PUTRA TEHNIK
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold text-brand-red mb-2">Main Office</h3>
+                        <p class="text-slate-300 leading-relaxed">
+                            Central Barelang. Blok E No.7.<br />
+                            Tg.Uncang. Batu Aji. Batam
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold text-brand-red mb-2">
+                            Branch Office
+                        </h3>
+                        <p class="text-slate-300 leading-relaxed">
+                            Gand Slipi Tower Lt 9 Unit O<br />
+                            Jl Jendral S Parman Kav 22-24<br />
+                            Kelurahan Pal Merah Kecamatan<br />
+                            Pal Merah Jakarta Barat<br />
+                            DKI Jakarta 11480
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 h-fit">
+                    <div class="space-y-6 text-slate-300">
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-brand-red mr-4 shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-slate-400 mb-1">Phone</h4>
+                                <p class="text-lg font-medium">+62 811 9122 773</p>
+                                <p class="text-lg font-medium">+62 813 6332 515</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-brand-red mr-4 shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-slate-400 mb-1">Email</h4>
+                                <p class="text-base font-medium hover:text-brand-red transition-colors cursor-pointer">
+                                    service.ipt@indoputratehnik.com
                                 </p>
-                                <ul
-                                    class="grid grid-cols-1 sm:grid-cols-2 gap-2 list-disc pl-5"
-                                >
-                                    <li>
-                                        Diagnostic inspection and fault finding
-                                    </li>
-                                    <li>Gear and bearing replacement</li>
-                                    <li>Shaft sealing and alignment</li>
-                                    <li>Clutch assembly repair</li>
-                                    <li>Lubrication system service</li>
-                                    <li>Casing and housing repairs</li>
-                                    <li>Performance testing</li>
-                                    <li>Preventative maintenance programs</li>
-                                </ul>
-                            </div>
-                        </details>
-
-                        <!-- ACCORDION 3: Hydraulic System -->
-                        <details
-                            class="group bg-slate-50 border border-slate-200 rounded-lg shadow-sm"
-                        >
-                            <summary
-                                class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-slate-900 group-open:text-brand-red group-open:bg-brand-light transition-colors rounded-lg"
-                            >
-                                <span>HYDRAULIC SYSTEM</span>
-                                <span class="transition group-open:rotate-180">
-                                    <svg
-                                        fill="none"
-                                        height="24"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        viewBox="0 0 24 24"
-                                        width="24"
-                                    >
-                                        <path d="M6 9l6 6 6-6"></path>
-                                    </svg>
-                                </span>
-                            </summary>
-                            <div
-                                class="p-6 text-sm text-slate-700 bg-white border-t border-slate-100 rounded-b-lg grid grid-cols-1 md:grid-cols-2 gap-6"
-                            >
-                                <ul
-                                    class="list-none space-y-2 font-semibold text-slate-800"
-                                >
-                                    <li>
-                                        <span class="text-brand-red mr-2"
-                                            >■</span
-                                        >
-                                        Repair Cargo / Hoist / Provision Crane
-                                    </li>
-                                    <li>
-                                        <span class="text-brand-red mr-2"
-                                            >■</span
-                                        >
-                                        Winchlass & Mooring winch
-                                    </li>
-                                    <li>
-                                        <span class="text-brand-red mr-2"
-                                            >■</span
-                                        >
-                                        Power Pack Steering Gear
-                                    </li>
-                                    <li>
-                                        <span class="text-brand-red mr-2"
-                                            >■</span
-                                        >
-                                        Bow Thruster & CPP
-                                    </li>
-                                    <li>
-                                        <span class="text-brand-red mr-2"
-                                            >■</span
-                                        >
-                                        Framo Pump
-                                    </li>
-                                </ul>
-                                <ul class="list-disc pl-5 space-y-1">
-                                    <li>Hydraulic system maintenance</li>
-                                    <li>Pump and motor repair</li>
-                                    <li>Valve servicing</li>
-                                    <li>System pressure testing</li>
-                                    <li>Leak detection and repair</li>
-                                    <li>System upgrades & Emergency repairs</li>
-                                </ul>
-                            </div>
-                        </details>
-
-                        <!-- ACCORDION 4: Pneumatic Repair -->
-                        <details
-                            class="group bg-slate-50 border border-slate-200 rounded-lg shadow-sm"
-                        >
-                            <summary
-                                class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-slate-900 group-open:text-brand-red group-open:bg-brand-light transition-colors rounded-lg"
-                            >
-                                <span>PNEUMATIC REPAIR AND MAINTENANCE</span>
-                                <span class="transition group-open:rotate-180">
-                                    <svg
-                                        fill="none"
-                                        height="24"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        viewBox="0 0 24 24"
-                                        width="24"
-                                    >
-                                        <path d="M6 9l6 6 6-6"></path>
-                                    </svg>
-                                </span>
-                            </summary>
-                            <div
-                                class="p-6 text-sm text-slate-700 bg-white border-t border-slate-100 rounded-b-lg"
-                            >
-                                <div
-                                    class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4"
-                                >
-                                    <div>
-                                        <p class="mb-2">
-                                            <strong>Component Assembly:</strong>
-                                            Installing actuators, cylinders,
-                                            valves, compressors, and air
-                                            treatment systems.
-                                        </p>
-                                        <p class="mb-2">
-                                            <strong>System Setup:</strong>
-                                            Assembling air logic systems,
-                                            piping, tubing, and headers
-                                            according to technical
-                                            specifications.
-                                        </p>
-                                        <p>
-                                            <strong>Calibration:</strong>
-                                            Configuring pressure regulators and
-                                            sensors.
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p class="mb-2">
-                                            <strong
-                                                >Preventative
-                                                Maintenance:</strong
-                                            >
-                                            Routine inspections (checking oil
-                                            levels, cleaning filters, draining
-                                            condensate).
-                                        </p>
-                                        <p class="mb-2">
-                                            <strong>Troubleshooting:</strong>
-                                            Diagnosing malfunctions in pneumatic
-                                            circuits, air leaks, and pressure
-                                            issues.
-                                        </p>
-                                        <p>
-                                            <strong>Repairs:</strong> Replacing
-                                            faulty components to minimize
-                                            downtime.
-                                        </p>
-                                    </div>
-                                </div>
-                                <ul
-                                    class="list-disc pl-5 font-semibold text-slate-800 border-t border-slate-100 pt-4"
-                                >
-                                    <li>
-                                        Maintenance Universal Monitoring System
-                                        Main engine
-                                    </li>
-                                    <li>
-                                        Maintenance Frame Cargo Pump control
-                                        system
-                                    </li>
-                                    <li>
-                                        Maintenance Pneumatic Cargo Tank control
-                                        system
-                                    </li>
-                                </ul>
-                            </div>
-                        </details>
-
-                        <!-- ACCORDION 5: Service Valve -->
-                        <details
-                            class="group bg-slate-50 border border-slate-200 rounded-lg shadow-sm"
-                        >
-                            <summary
-                                class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-slate-900 group-open:text-brand-red group-open:bg-brand-light transition-colors rounded-lg"
-                            >
-                                <span>SERVICE AND REPAIR VALVE</span>
-                                <span class="transition group-open:rotate-180">
-                                    <svg
-                                        fill="none"
-                                        height="24"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        viewBox="0 0 24 24"
-                                        width="24"
-                                    >
-                                        <path d="M6 9l6 6 6-6"></path>
-                                    </svg>
-                                </span>
-                            </summary>
-                            <div
-                                class="p-6 text-sm text-slate-700 bg-white border-t border-slate-100 rounded-b-lg"
-                            >
                                 <p
-                                    class="font-bold text-white mb-4 bg-brand-red inline-block px-3 py-1 rounded shadow-sm text-xs tracking-wider"
-                                >
-                                    PV VALVE SERVICE & CLASS SERTIFICATE
+                                    class="text-base font-medium hover:text-brand-red transition-colors cursor-pointer mt-1">
+                                    indoservice.ipt@gmail.com
                                 </p>
-                                <ul
-                                    class="grid grid-cols-1 sm:grid-cols-2 gap-3 list-none font-medium"
-                                >
-                                    <li>
-                                        <span class="text-brand-red mr-2"
-                                            >✔</span
-                                        >
-                                        PV valve , Safety Valve
-                                    </li>
-                                    <li>
-                                        <span class="text-brand-red mr-2"
-                                            >✔</span
-                                        >
-                                        Tank Gauging System
-                                    </li>
-                                    <li>
-                                        <span class="text-brand-red mr-2"
-                                            >✔</span
-                                        >
-                                        O/H Valve
-                                    </li>
-                                    <li>
-                                        <span class="text-brand-red mr-2"
-                                            >✔</span
-                                        >
-                                        Press Test Valve
-                                    </li>
-                                    <li>
-                                        <span class="text-brand-red mr-2"
-                                            >✔</span
-                                        >
-                                        Service and Calibration Safety Valve
-                                    </li>
-                                    <li>
-                                        <span class="text-brand-red mr-2"
-                                            >✔</span
-                                        >
-                                        Service and Calibration PV valve
-                                    </li>
-                                </ul>
-                            </div>
-                        </details>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT US -->
-        <section id="contact" class="py-20 bg-slate-900 text-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2
-                    class="text-3xl font-bold mb-10 text-white uppercase border-b border-slate-700 pb-4"
-                >
-                    Company Profile & Contact
-                </h2>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <!-- Address Section -->
-                    <div class="space-y-8">
-                        <div>
-                            <h3 class="text-xl font-bold text-brand-red mb-2">
-                                Company Name
-                            </h3>
-                            <p class="text-lg font-medium text-slate-200">
-                                PT. INDO PUTRA TEHNIK
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 class="text-xl font-bold text-brand-red mb-2">
-                                Main Office
-                            </h3>
-                            <p class="text-slate-300 leading-relaxed">
-                                Central Barelang. Blok E No.7.<br />
-                                Tg.Uncang. Batu Aji. Batam
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 class="text-xl font-bold text-brand-red mb-2">
-                                Branch Office
-                            </h3>
-                            <p class="text-slate-300 leading-relaxed">
-                                Gand Slipi Tower Lt 9 Unit O<br />
-                                Jl Jendral S Parman Kav 22-24<br />
-                                Kelurahan Pal Merah Kecamatan<br />
-                                Pal Merah Jakarta Barat<br />
-                                DKI Jakarta 11480
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Contact Details -->
-                    <div
-                        class="bg-slate-800 p-8 rounded-xl border border-slate-700 h-fit"
-                    >
-                        <div class="space-y-6 text-slate-300">
-                            <div class="flex items-start">
-                                <div
-                                    class="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-brand-red mr-4 shrink-0"
-                                >
-                                    <svg
-                                        class="w-5 h-5"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                                        ></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm text-slate-400 mb-1">
-                                        Phone
-                                    </h4>
-                                    <p class="text-lg font-medium">
-                                        +62 81 19122773
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div
-                                    class="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-brand-red mr-4 shrink-0"
-                                >
-                                    <svg
-                                        class="w-5 h-5"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                                        ></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm text-slate-400 mb-1">
-                                        Email
-                                    </h4>
-                                    <p
-                                        class="text-base font-medium hover:text-brand-red transition-colors cursor-pointer"
-                                    >
-                                        service.ipt@indoputratehnik.com
-                                    </p>
-                                    <p
-                                        class="text-base font-medium hover:text-brand-red transition-colors cursor-pointer mt-1"
-                                    >
-                                        indoservice.ipt@gmail.com
-                                    </p>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- FOOTER -->
-        <footer
-            class="bg-slate-950 text-slate-500 py-6 border-t border-slate-900 text-center text-sm"
-        >
-            <div class="max-w-7xl mx-auto px-4">
-                <p>&copy; 2026 PT. INDO PUTRA TEHNIK. All rights reserved.</p>
-            </div>
-        </footer>
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-500 py-6 border-t border-slate-900 text-center text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2026 PT. INDO PUTRA TEHNIK. All rights reserved.</p>
+        </div>
+    </footer>
 
-        <!-- ========================================== -->
-        <!-- SEMUA SCRIPT INTERAKTIF ADA DI BAWAH INI -->
-        <!-- ========================================== -->
-        <script>
-            // ----------------------------------------------------
-            // 1. SCRIPT UNTUK MENU MOBILE (HP)
-            // ----------------------------------------------------
-            const btn = document.getElementById("mobile-menu-btn");
-            const menu = document.getElementById("mobile-menu");
+    <!-- ========================================== -->
+    <!-- SEMUA SCRIPT INTERAKTIF ADA DI BAWAH INI -->
+    <!-- ========================================== -->
+    <script>
+        // ----------------------------------------------------
+        // 1. SCRIPT UNTUK MENU MOBILE (HP)
+        // ----------------------------------------------------
+        const btn = document.getElementById("mobile-menu-btn");
+        const menu = document.getElementById("mobile-menu");
 
-            btn.addEventListener("click", () => {
-                menu.classList.toggle("hidden");
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+
+        const mobileLinks = menu.querySelectorAll("a");
+        mobileLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                menu.classList.add("hidden");
             });
+        });
 
-            const mobileLinks = menu.querySelectorAll("a");
-            mobileLinks.forEach((link) => {
-                link.addEventListener("click", () => {
-                    menu.classList.add("hidden");
-                });
-            });
+        // ----------------------------------------------------
+        // 2. SCRIPT UNTUK GALERI LOGO PELANGGAN (DINAMIS)
+        // ----------------------------------------------------
+        // Path ke folder tempat Anda menyimpan gambar logo
+        const folderPath = "customers/";
 
-            // ----------------------------------------------------
-            // 2. SCRIPT UNTUK GALERI LOGO PELANGGAN (DINAMIS)
-            // ----------------------------------------------------
-            // Path ke folder tempat Anda menyimpan gambar logo
-            const folderPath = "customers/";
+        // Tulis NAMA FILE gambar logo Anda di dalam tanda kutip ini.
+        // Jika ada pelanggan baru, cukup tambahkan nama filenya di baris baru.
+        const logoFiles = [
+            "barokah-perkasa-group-scaled.png",
+            "ben.png",
+            "bw epic kosan.png",
+            "Hoegh.png",
+            "icon-korindo.png",
+            "imageedit_1_8118594668.png",
+            "logo-abl-group-new.png",
+            "LogoLMI.png",
+            "Logo-Musim-Mas-200x200.png",
+            "miniship.png",
+            "Navigator-Gas.png",
+            "oceanindo.png",
+            "pt_dian_ciptamas_agung_logo.png",
+            "ptdak1.png",
+            "soechi.png",
+            "transpower.png",
+            "wanhai.png",
+            "wintermar.png",
+        ];
 
-            // Tulis NAMA FILE gambar logo Anda di dalam tanda kutip ini.
-            // Jika ada pelanggan baru, cukup tambahkan nama filenya di baris baru.
-            const logoFiles = [
-                "barokah-perkasa-group-scaled.png",
-                "ben.png",
-                "bw epic kosan.png",
-                "Hoegh.png",
-                "icon-korindo.png",
-                "imageedit_1_8118594668.png",
-                "logo-abl-group-new.png",
-                "LogoLMI.png",
-                "Logo-Musim-Mas-200x200.png",
-                "miniship.png",
-                "Navigator-Gas.png",
-                "oceanindo.png",
-                "pt_dian_ciptamas_agung_logo.png",
-                "ptdak1.png",
-                "soechi.png",
-                "transpower.png",
-                "wanhai.png",
-                "wintermar.png",
-            ];
+        const logoGrid = document.getElementById("customer-logo-grid");
 
-            const logoGrid = document.getElementById("customer-logo-grid");
+        // Looping untuk membuat elemen gambar secara otomatis
+        logoFiles.forEach((file) => {
+            // Membuat kotak putih pembungkus logo
+            const logoDiv = document.createElement("div");
+            logoDiv.className =
+                "bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex items-center justify-center h-28 hover:shadow-md hover:border-brand-red transition-all duration-300";
 
-            // Looping untuk membuat elemen gambar secara otomatis
-            logoFiles.forEach((file) => {
-                // Membuat kotak putih pembungkus logo
-                const logoDiv = document.createElement("div");
-                logoDiv.className =
-                    "bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex items-center justify-center h-28 hover:shadow-md hover:border-brand-red transition-all duration-300";
+            // Membuat elemen gambar
+            const img = document.createElement("img");
+            img.src = folderPath + file;
+            img.alt = "Customer Logo";
+            // Efek hitam putih (grayscale) yang akan berwarna saat kursor menyentuh gambar
+            img.className =
+                "max-h-full max-w-full object-contain hover:grayscale-0 transition-all duration-300";
 
-                // Membuat elemen gambar
-                const img = document.createElement("img");
-                img.src = folderPath + file;
-                img.alt = "Customer Logo";
-                // Efek hitam putih (grayscale) yang akan berwarna saat kursor menyentuh gambar
-                img.className =
-                    "max-h-full max-w-full object-contain hover:grayscale-0 transition-all duration-300";
+            // Masukkan gambar ke kotak, lalu masukkan kotak ke kontainer
+            logoDiv.appendChild(img);
+            logoGrid.appendChild(logoDiv);
+        });
+    </script>
 
-                // Masukkan gambar ke kotak, lalu masukkan kotak ke kontainer
-                logoDiv.appendChild(img);
-                logoGrid.appendChild(logoDiv);
-            });
-        </script>
-    </body>
+    <script>
+        const slider = document.getElementById("slider");
+        let index = 0;
+        const slides = slider.children;
+
+        // Fungsi untuk otomatis slide setiap 4 detik
+        setInterval(() => {
+            index = (index + 1) % slides.length;
+            slider.style.transform = `translateX(-${index * 100}%)`;
+        }, 4000);
+    </script>
+
+    <script>
+        // Script Multi-Slider untuk Service Details
+        const serviceSliders = document.querySelectorAll('.service-slider-track');
+        serviceSliders.forEach(slider => {
+            let idx = 0;
+            const slideCount = slider.children.length;
+
+            // Slider hanya akan berjalan jika ada lebih dari 1 gambar
+            if (slideCount > 1) {
+                setInterval(() => {
+                    idx = (idx + 1) % slideCount;
+                    slider.style.transform = `translateX(-${idx * 100}%)`;
+                }, 3500); // Berganti setiap 3.5 detik
+            }
+        });
+    </script>
+</body>
+
 </html>
